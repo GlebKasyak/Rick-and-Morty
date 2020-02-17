@@ -1,0 +1,57 @@
+@import '~antd/dist/antd.css';
+
+$default-padding: 15px;
+$default-margin: 15px;
+
+$light-blue: #b2ebf2;
+$red-color: #ff4d4f;
+
+%center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  padding: $default-padding + 15px;
+}
+
+.p15 {
+  padding: $default-padding;
+}
+
+.card {
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 0 2px 8px 0 rgba(0, 0, 0, 0.19);
+
+  .ant-card-actions {
+    @extend %center;
+
+    .ant-btn {
+      background-color: $light-blue;
+      border: 0;
+      outline: none;
+
+      &.favorite {
+        background-color: $red-color;
+        color: white;
+      }
+    }
+  }
+}
+
+.header {
+  height: 100px;
+  background-color: $light-blue;
+  @extend %center;
+
+  &__menu {
+    flex: 1;
+  }
+
+  .logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-right: $default-padding;
+  }
+}
